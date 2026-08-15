@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Downloads</title>
+    <style>
+        /* Base dark background */
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
 
+        /* Heading section */
+        h1 {
+            color: #0055ff;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #4b6584;
+            margin-bottom: 30px;
+        }
+
+        /* Container for the download item cards */
+        .menu-container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* Download item card design */
+        .mod-card {
+            background-color: #121620;
+            border: 1px solid #1a2233;
+            border-radius: 8px;
+            padding: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .mod-card:hover {
+            transform: translateY(-2px);
+            border-color: #0044ff;
+        }
+
+        .card-title {
+            color: #0055ff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Style for the back button */
+        .back-btn {
+            color: #4b6584;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 30px;
+            transition: color 0.2s;
+        }
+        .back-btn:hover {
+            color: #0055ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mod Downloads</h1>
+    <p class="subtitle">Select a file below to start downloading</p>
+
+    <!-- List of active files -->
+    <div class="menu-container">
+
+        <!-- Download Item 1 -->
+        <!-- Replace 'files/FridaTools.zip' with your real download URL -->
+        <a href="files/FridaTools.zip" class="mod-card" download>
+            <p class="card-title">Download Frida Tools</p>
+            <span style="color: #4b6584; font-size: 0.9rem;">⬇️ ZIP</span>
+        </a>
+
+        <!-- Download Item 2 -->
+        <a href="files/CyberMenu.exe" class="mod-card" download>
+            <p class="card-title">Download Cyber.exe Menu</p>
+            <span style="color: #4b6584; font-size: 0.9rem;">⬇️ EXE</span>
+        </a>
+
+        <!-- Download Item 3 -->
+        <a href="files/N5Setup.zip" class="mod-card" download>
+            <p class="card-title">Download N5 Mod Setup</p>
+            <span style="color: #4b6584; font-size: 0.9rem;">⬇️ ZIP</span>
+        </a>
+
+    </div>
+
+    <!-- Navigation link back home -->
+    <a href="index.html" class="back-btn">← Back to Main Menu</a>
+
+</body>
+</html>
