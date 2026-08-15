@@ -1,121 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">67&unique_share_id y
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RiftGT Remake</title>
+    <title>My Mod Hub</title>
     <style>
-        /* This changes the background color of the whole page to a dark theme */
+        /* Base styles for the dark background */
         body {
-            background-color: #00007b;
-            color: #00008b;
-            font-family: Arial, sans-serif;
+            background-color: #0b0c10;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            justify-content: flex-start;
+            min-height: 100vh;
             margin: 0;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
 
-        /* This creates the circular avatar container */
-        .avatar-container {
+        /* Profile image wrapper with the glowing ring */
+        .profile-container {
+            position: relative;
             width: 150px;
             height: 150px;
-            border-radius: 50%;
-            border: 4px solid #ff0000; /* Red glowing ring */
-            box-shadow: 0 0 20px #ff0000;
-            overflow: hidden;
             margin-bottom: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #1a1a1a;
         }
 
-        /* This styles the profile image inside the circle */
-        .avatar-image {
+        .profile-pic {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
+            border: 3px solid #ff1e27;
+            box-shadow: 0 0 25px #ff1e27, inset 0 0 15px #ff1e27;
         }
 
-        /* This styles the list of menu button links */
+        /* Container for the menu buttons */
         .menu-container {
             width: 100%;
             max-width: 500px;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 16px;
         }
 
-        /* This styles each individual link card button */
-        .menu-card {
-            background-color: #1a2238; /* Dark blue/gray button background */
-            border: 1px solid #2a3754;
-            border-radius: 10px;
-            padding: 15px 20px;
+        /* Styled button card */
+        .mod-card {
+            background-color: #121620;
+            border: 1px solid #1a2233;
+            border-radius: 8px;
+            padding: 16px;
             text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.2s ease, border-color 0.2s ease;
             display: block;
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        /* This makes the buttons lift up and glow when you hover over them */
-        .menu-card:hover {
+        /* Hover effect on the cards */
+        .mod-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-            border-color: #ff0000;
+            border-color: #0044ff; /* Glow changes to blue on hover */
         }
 
-        /* This styles the bold red titles inside each button */
+        /* Title text inside the card - Dark Blue */
         .card-title {
-            color: #ff3333;
-            font-size: 18px;
+            color: #0055ff;
+            font-size: 1.1rem;
             font-weight: bold;
-            margin: 0 0 5px 0;
+            margin: 0 0 6px 0;
         }
 
-        /* This styles the smaller helper text inside each button */
-        .card-description {
-            color: #b0b3b8;
-            font-size: 14px;
+        /* Subtext description inside the card - Dark Slate Blue */
+        .card-desc {
+            color: #4b6584;
+            font-size: 0.9rem;
             margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. PROFILE PICTURE AREA -->
-    <!-- Swap the link below with your own image URL later if you want -->
-    <div class="avatar-container">
-        <img class="avatar-image" src="https://placeholder.com" alt="Profile Picture">
+    <!-- Profile Area -->
+    <div class="profile-container">
+        <img src="profile.png" alt="Profile Avatar" class="profile-pic">
     </div>
 
-    <!-- 2. mods -->
+    <!-- Links / Menu List -->
     <div class="menu-container">
 
-        <!-- Button 1: Frida Tools -->
-        <a href="mods.html" class="menu-card" target="_blank">
-            <p class="card-title">mods</p>
-            <p class="card-description">the mods for games!
-        </p>
+        <!-- Top Card -->
+        <a href="YOUR_DOWNLOAD_LINK_HERE" class="mod-card" target="_blank">
+            <p class="card-title">Mods</p>
+            <p class="card-desc">Click here to access current files.</p>
         </a>
 
-        <!-- coming soon -->
-        <a href="https://example.com" class="menu-card" target="_blank">
-            <p class="card-title">coming soon</p>
-            <p class="card-description"></p>
+        <!-- Second Card -->
+        <a href="#" class="mod-card" onclick="return false;">
+            <p class="card-title">Coming Soon</p>
+            <p class="card-desc">New content will be added here shortly.</p>
         </a>
 
-        <!-- coming soon -->
-        <a href="https://example.com" class="menu-card" target="_blank">
-            <p class="card-title">coming soon</p>
-            <p class="card-description"></p>
-        </a>
-
-        <!-- Button 4: Standy Mod -->
-        <a href="https://example.com" class="menu-card" target="_blank">
-            <p class="card-title">coming soon</p>
-            <p class="card-description"></p>
+        <!-- Third Card -->
+        <a href="#" class="mod-card" onclick="return false;">
+            <p class="card-title">Coming Soon</p>
+            <p class="card-desc">Check back later for updates.</p>
         </a>
 
     </div>
