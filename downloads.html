@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Available Downloads</title>
+    <title>My Mod Hub</title>
     <style>
-        /* Base dark background */
+        /* Base styles for the dark background */
         body {
             background-color: #0b0c10;
             color: #ffffff;
@@ -20,18 +20,24 @@
             box-sizing: border-box;
         }
 
-        /* Heading section */
-        h1 {
-            color: #0055ff;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            color: #4b6584;
-            margin-bottom: 30px;
+        /* Profile image wrapper with the glowing ring */
+        .profile-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 40px;
         }
 
-        /* Container for the download item cards */
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ff1e27;
+            box-shadow: 0 0 25px #ff1e27, inset 0 0 15px #ff1e27;
+        }
+
+        /* Container for the menu buttons */
         .menu-container {
             width: 100%;
             max-width: 500px;
@@ -40,7 +46,7 @@
             gap: 16px;
         }
 
-        /* Download item card design */
+        /* Styled button card */
         .mod-card {
             background-color: #121620;
             border: 1px solid #1a2233;
@@ -49,68 +55,61 @@
             text-decoration: none;
             color: #ffffff;
             transition: transform 0.2s ease, border-color 0.2s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: block;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
+        /* Hover effect on the cards */
         .mod-card:hover {
             transform: translateY(-2px);
-            border-color: #0044ff;
+            border-color: #0044ff; /* Glow changes to blue on hover */
         }
 
+        /* Title text inside the card - Dark Blue */
         .card-title {
             color: #0055ff;
             font-size: 1.1rem;
             font-weight: bold;
-            margin: 0;
+            margin: 0 0 6px 0;
         }
 
-        /* Style for the back button */
-        .back-btn {
+        /* Subtext description inside the card - Dark Slate Blue */
+        .card-desc {
             color: #4b6584;
-            text-decoration: none;
             font-size: 0.9rem;
-            margin-top: 30px;
-            transition: color 0.2s;
-        }
-        .back-btn:hover {
-            color: #0055ff;
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <h1>Mod Downloads</h1>
-    <p class="subtitle">Select a file below to start downloading</p>
+    <!-- Profile Area -->
+    <div class="profile-container">
+        <img src="profile.png" alt="Profile Avatar" class="profile-pic">
+    </div>
 
-    <!-- List of active files -->
+    <!-- Links / Menu List -->
     <div class="menu-container">
 
-        <!-- Download Item 1 -->
-        <!-- Replace 'files/FridaTools.zip' with your real download URL -->
-        <a href="files/FridaTools.zip" class="mod-card" download>
-            <p class="card-title">Download Frida Tools</p>
-            <span style="color: #4b6584; font-size: 0.9rem;">⬇️ ZIP</span>
+        <!-- Top Card - Links Directly to Your Gofile Page -->
+        <a href="https://gofile.io/d/IMZzk8" class="mod-card" target="_blank">
+            <p class="card-title">Mods</p>
+            <p class="card-desc">Click here to access current files.</p>
         </a>
 
-        <!-- Download Item 2 -->
-        <a href="files/CyberMenu.exe" class="mod-card" download>
-            <p class="card-title">Download Cyber.exe Menu</p>
-            <span style="color: #4b6584; font-size: 0.9rem;">⬇️ EXE</span>
+        <!-- Second Card -->
+        <a href="#" class="mod-card" onclick="return false;">
+            <p class="card-title">Coming Soon</p>
+            <p class="card-desc">New content will be added here shortly.</p>
         </a>
 
-        <!-- Download Item 3 -->
-        <a href="files/N5Setup.zip" class="mod-card" download>
-            <p class="card-title">Download N5 Mod Setup</p>
-            <span style="color: #4b6584; font-size: 0.9rem;">⬇️ ZIP</span>
+        <!-- Third Card -->
+        <a href="#" class="mod-card" onclick="return false;">
+            <p class="card-title">Coming Soon</p>
+            <p class="card-desc">Check back later for updates.</p>
         </a>
 
     </div>
-
-    <!-- Navigation link back home -->
-    <a href="index.html" class="back-btn">← Back to Main Menu</a>
 
 </body>
 </html>
